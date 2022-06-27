@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Job HCI • A-Frame</title>
+    <meta name="viewport" content="width=device-width">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <a-scene background="color: #6ba2fa">
+      <a-assets>
+        <img id="wood" src="images/wood2.jpg" />
+        <img id="wood2" src="images/wood.jpg" />
+        <img id="grass" src="images/grass.jpg" />
+      </a-assets>
+      <a-plane id="ground"
+        position="0 -3 -0" 
+        rotation="-90 0 0" 
+        width="200" 
+        height="200" 
+        color="#7BC8A4" 
+        material="src: #grass; repeat: 20 20"
+        shadow>
+      </a-plane>
+      <a-box id="doosje??" 
+        position="-1 1 -3" 
+        rotation="200 120 30"  
+        width="2" 
+        height="0.2" 
+        depth="0.5"
+        material="src: #wood"
+        animation="property: rotation; 
+                   to: 0 45 0; 
+                   dur: 5000; 
+                   easing: easeInOutExpo; 
+                   loop: true"
+        animation-direction="alternate">
+      </a-box>
+      <a-box id="doosje??" 
+        position="2 1 -3" 
+        rotation="0 45 0" 
+        width="2" 
+        height="4" 
+        depth="0.5"
+        material="src: #wood2"
+        animation="property: rotation; 
+                   to: 200 120 30; 
+                   dur: 5000; 
+                   easing: easeInOutExpo; 
+                   loop: true"
+        animation-direction="alternate">
+      </a-box> 
+    </a-scene>
+  </body>
+</html>
